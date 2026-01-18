@@ -1,0 +1,157 @@
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-loading,
+.map-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background: white;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.map-error {
+  color: #d32f2f;
+}
+
+.map-legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.map-legend h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Popup Styles */
+.popup-content {
+  min-width: 200px;
+}
+
+.popup-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.popup-details {
+  margin-bottom: 12px;
+}
+
+.popup-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.popup-row span:first-child {
+  color: #666;
+}
+
+.popup-row strong {
+  color: #333;
+}
+
+.classification {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.classification.strongly-improving {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.classification.improving {
+  background: #e8f5e9;
+  color: #43a047;
+}
+
+.classification.neutral {
+  background: #fff9c4;
+  color: #f57f17;
+}
+
+.classification.deteriorating {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.classification.strongly-deteriorating {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.popup-button {
+  width: 100%;
+  padding: 8px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.popup-button:hover {
+  background: #1565c0;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 400px;
+  }
+
+  .map-legend {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+
+  .map-legend h4 {
+    font-size: 12px;
+  }
+
+  .legend-item {
+    font-size: 11px;
+  }
+}
